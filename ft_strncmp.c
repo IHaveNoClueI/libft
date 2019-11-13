@@ -21,5 +21,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		// TODO: strlen from strings, and count up to n
 		s1-len = ft_strlen(s1);
 		s2-len = ft_strlen(s2);
+
 	}
 }
