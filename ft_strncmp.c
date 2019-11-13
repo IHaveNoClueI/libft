@@ -10,3 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	// check if str in not to the end.
+	if (s1 != '\0' && s2 != '\0')
+	{
+		// TODO
+		// strlen from strings, and count up to n
+	}
+}

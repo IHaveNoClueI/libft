@@ -27,6 +27,6 @@ void	ft_putchar(int c);
 size_t	ft_strlen(const char *s);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-void	*ft_memset(void *b, int c, size_t len);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
