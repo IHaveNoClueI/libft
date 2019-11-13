@@ -15,12 +15,14 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	// check if str in not to the end.
-	if (s1 != '\0' && s2 != '\0')
-	{
-		// TODO: strlen from strings, and count up to n
-		s1-len = ft_strlen(s1);
-		s2-len = ft_strlen(s2);
+	int i;
 
+	i = 0;
+	s1-len = ft_strlen(s1);
+	s2-len = ft_strlen(s2);
+
+	if (s1-len <= n && s2-len <= n)
+	{
+		if ()
 	}
 }
