@@ -42,10 +42,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1af77e2b-c4d6-497f-b695-06e3b087622b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_strncmp.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_strncmp.c" afterDir="false" />
-    </list>
+    <list default="true" id="1af77e2b-c4d6-497f-b695-06e3b087622b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +122,7 @@
       <workItem from="1573672721268" duration="104000" />
       <workItem from="1573672829488" duration="60000" />
       <workItem from="1573672899911" duration="855000" />
-      <workItem from="1573673767921" duration="384000" />
+      <workItem from="1573673767921" duration="482000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1573672866986</created>
