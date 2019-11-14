@@ -10,19 +10,3 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <string.h>
-
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
-{
-	int i;
-
-	i = 0;
-	s1-len = ft_strlen(s1);
-	s2-len = ft_strlen(s2);
-
-	if (s1-len <= n && s2-len <= n)
-	{
-		if ()
-	}
-}
