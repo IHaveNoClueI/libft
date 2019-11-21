@@ -6,19 +6,19 @@
 #    By: keblazer <keblazer@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/10/31 16:52:53 by keblazer       #+#    #+#                 #
-#    Updated: 2019/11/21 02:14:15 by keblazer      ########   odam.nl          #
+#    Updated: 2019/11/21 04:09:25 by keblazer      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -c
 AR = ar rc
 NAME 	= 	libft.a
 SRCS = *.c
 OBJS = *.o
 
 $(NAME):
-		$(CC) $(CFLAGS) -c $(SRCS)
+		$(CC) $(CFLAGS) $(SRCS)
 		$(AR) $(NAME) $(OBJS)
 		echo "[INFO] Library [$(NAME)] created!"
 
@@ -32,4 +32,4 @@ fclean: clean
 		rm -f $(NAME)
 		echo "[INFO] Library [$(NAME)] removed!"
 
-re: all clean fclean
+re: fclean all

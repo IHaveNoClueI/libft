@@ -97,7 +97,7 @@ The library contains a makefile, with the following options:
 - Copy of the repository:
 
 ```shell=
-git clone https://github.com/Ant0wan/Libft.git && cd libft
+git clone https://github.com/IHaveNoClueI/libft.git && cd libft
 ```
 
 - Compiling Libft:
