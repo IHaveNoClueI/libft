@@ -6,7 +6,7 @@
 #    By: keblazer <keblazer@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/10/31 16:52:53 by keblazer       #+#    #+#                 #
-#    Updated: 2019/11/11 10:04:58 by keblazer      ########   odam.nl          #
+#    Updated: 2019/11/21 02:04:04 by keblazer      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,4 +32,4 @@ fclean: clean
 		rm -f $(NAME)
 		echo "[INFO] Library [$(NAME)] removed!"
 
-re:	fclean all
+re: all clean fclean
