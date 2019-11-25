@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/11 17:12:39 by keblazer       #+#    #+#                */
-/*   Updated: 2019/11/25 13:32:20 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/11/25 14:55:59 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	char *chr;
 
-	i = 0;
-	if (i != c)
+	chr = (char *)s;
+	while (*chr != c)
 	{
-		ft_putchar(s[i]);
-		i++;
+		if (!*chr)
+		{
+			return (NULL);
+		}
+		chr++;
 	}
-	return (0);
+	return (chr);
 }
