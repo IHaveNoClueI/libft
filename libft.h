@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 16:01:20 by keblazer       #+#    #+#                */
-/*   Updated: 2019/11/22 11:09:06 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/11/25 13:46:07 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
 void	ft_putchar(int c);
+void	ft_putchar_fd(char c, int fd);
 size_t	ft_strlen(const char *s);
 int		ft_tolower(int c);
 int		ft_toupper(int c);

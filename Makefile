@@ -6,7 +6,7 @@
 #    By: keblazer <keblazer@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/10/31 16:52:53 by keblazer       #+#    #+#                 #
-#    Updated: 2019/11/21 04:09:25 by keblazer      ########   odam.nl          #
+#    Updated: 2019/11/25 14:30:16 by keblazer      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,16 +20,13 @@ OBJS = *.o
 $(NAME):
 		$(CC) $(CFLAGS) $(SRCS)
 		$(AR) $(NAME) $(OBJS)
-		echo "[INFO] Library [$(NAME)] created!"
 
 all: $(NAME)
 
 clean:
 		rm -f $(OBJS)
-		echo "[INFO] Objects removed!"
 
 fclean: clean
 		rm -f $(NAME)
-		echo "[INFO] Library [$(NAME)] removed!"
 
 re: fclean all
