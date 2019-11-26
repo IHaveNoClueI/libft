@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 11:22:44 by keblazer       #+#    #+#                */
-/*   Updated: 2019/11/25 13:40:52 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/11/26 09:12:58 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 127)
+	if (c >= 32 && c <= 126)
 	{
 		return (1);
 	}
