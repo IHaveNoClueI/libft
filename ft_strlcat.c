@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/11 17:12:33 by keblazer       #+#    #+#                */
-/*   Updated: 2019/11/26 12:14:51 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/11/30 14:37:40 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	k = 0;
-	if (dstsize == 0)
+	if (!dstsize)
 	{
 		return (0);
 	}

@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcpy.c                                        :+:    :+:            */
+/*   ft_max.c                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/11 17:12:53 by keblazer       #+#    #+#                */
-/*   Updated: 2019/11/30 12:45:45 by keblazer      ########   odam.nl         */
+/*   Created: 2019/11/30 14:39:44 by keblazer       #+#    #+#                */
+/*   Updated: 2019/11/30 14:46:04 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_max(int num1, int num2)
 {
-	unsigned char *d;
-	unsigned char *s;
+	int result;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (!n || dest == src)
+	if (num1 > num2)
 	{
-		return (dest);
+		result = num1;
 	}
-	while (n--)
+	else
 	{
-		*d++ = *s++;
+		result = num2;
 	}
-	return (dest);
+	return (result);
 }
