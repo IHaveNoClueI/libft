@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/11 17:12:30 by keblazer       #+#    #+#                */
-/*   Updated: 2019/11/25 13:23:46 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/11/30 15:56:11 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,28 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t k;
+	size_t	count;
+	size_t	size;
 
-	i = 0;
-	k = 0;
-	if (dstsize == 0)
+	count = 0;
+	size = 0;
+	if (!dst)
 	{
 		return (0);
 	}
-	while (src[k] != '\0')
+	while (src[size])
 	{
-		k++;
+		size++;
 	}
-	while (i < k && i < (dstsize - 1))
+	if (!dstsize)
 	{
-		dst[i] = src[i];
-		i++;
+		return (size);
 	}
-	dst[i] = '\0';
-	return (k);
+	while (src[count] && count < dstsize - 1)
+	{
+		dst[count] = src[count];
+		count++;
+	}
+	dst[count] = '\0';
+	return (size);
 }

@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/15 05:38:38 by keblazer       #+#    #+#                */
-/*   Updated: 2019/11/21 07:10:40 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/11/30 15:46:27 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void *ptr;
+	void	*dst;
 
-	if (count == 0 || size == 0)
-	{
-		return (0);
-	}
-	ptr = malloc(size * count);
-	ft_bzero(ptr, count);
-	return (ptr);
+	dst = malloc(count * size);
+	if (dst == NULL)
+		return (NULL);
+	ft_bzero(dst, count * size);
+	return (dst);
 }
