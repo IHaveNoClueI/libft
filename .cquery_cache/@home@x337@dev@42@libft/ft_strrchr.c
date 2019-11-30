@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strnstr.c                                       :+:    :+:            */
+/*   ft_strrchr.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/11 17:12:24 by keblazer       #+#    #+#                */
-/*   Updated: 2019/11/28 17:40:51 by keblazer      ########   odam.nl         */
+/*   Created: 2019/11/11 17:12:22 by keblazer       #+#    #+#                */
+/*   Updated: 2019/11/25 15:13:41 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
- char	*ft_strnstr(const char *big, const char *little, size_t len)
- {
-	size_t i;
+char	*ft_strrchr(const char *s, int c)
+{
+	char	*chr;
 
-	i = 0;
-	// If little is an empty string, big is returned;
-	if (!*little)
+	chr = NULL;
+	if (c == '\0')
 	{
-		return ((char *)big);
+		return ((char*)s + ft_strlen(s));
 	}
-	// if little occurs nowhere in big, NULL is returned;
-	while(i <= len)
+	while (*s)
 	{
-		if (little[len] != big[len])
+		if (*s == (char)c)
 		{
-			return (0);
+			chr = (char *)s;
 		}
+		s++;
 	}
-	// otherwise a pointer to the first character of the first occurrence of little is returned.
-	return (0);
- }
+	return (chr);
+}

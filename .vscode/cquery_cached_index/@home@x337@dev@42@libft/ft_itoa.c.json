@@ -1,0 +1,2 @@
+15
+{"last_modification_time":1573736507,"language":0,"import_file":"/home/x337/dev/42/libft/ft_itoa.c","args":["clang","-working-directory=/home/x337/dev/42/libft/","/home/x337/dev/42/libft/ft_itoa.c","-resource-dir=/usr/lib/clang/9.0.0","-Wno-unknown-warning-option","-fparse-all-comments","-isystem/usr/local/include","-isystem/usr/lib/clang/9.0.0/include","-isystem/usr/include"],"includes":[],"dependencies":[],"skipped_by_preprocessor":[],"types":[],"funcs":[],"vars":[]}

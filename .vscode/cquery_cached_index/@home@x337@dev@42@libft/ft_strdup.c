@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strnstr.c                                       :+:    :+:            */
+/*   ft_strdup.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/11 17:12:24 by keblazer       #+#    #+#                */
-/*   Updated: 2019/11/28 17:40:51 by keblazer      ########   odam.nl         */
+/*   Created: 2019/11/11 17:12:37 by keblazer       #+#    #+#                */
+/*   Updated: 2019/11/25 14:21:29 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
+#include <stdlib.h>
 
- char	*ft_strnstr(const char *big, const char *little, size_t len)
- {
-	size_t i;
+char	*ft_strdup(const char *s1)
+{
+	char	*new;
+	int		len;
+	int		i;
 
 	i = 0;
-	// If little is an empty string, big is returned;
-	if (!*little)
+	len = 0;
+	while (s1[len])
 	{
-		return ((char *)big);
+		len++;
 	}
-	// if little occurs nowhere in big, NULL is returned;
-	while(i <= len)
+	new = (char *)malloc(len * sizeof(*s1) + 1);
+	if (!new)
 	{
-		if (little[len] != big[len])
-		{
-			return (0);
-		}
+		return (NULL);
 	}
-	// otherwise a pointer to the first character of the first occurrence of little is returned.
-	return (0);
- }
+	while (i < len)
+	{
+		new[i] = s1[i];
+		i++;
+	}
+	new[len] = '\0';
+	return (new);
+	free(new);
+}

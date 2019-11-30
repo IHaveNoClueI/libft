@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strnstr.c                                       :+:    :+:            */
+/*   ft_memcmp.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/11 17:12:24 by keblazer       #+#    #+#                */
-/*   Updated: 2019/11/28 17:40:51 by keblazer      ########   odam.nl         */
+/*   Created: 2019/11/11 17:12:55 by keblazer       #+#    #+#                */
+/*   Updated: 2019/11/26 12:08:47 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
- char	*ft_strnstr(const char *big, const char *little, size_t len)
- {
-	size_t i;
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	unsigned char	*str1;
+	unsigned char	*str2;
+	size_t			i;
 
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
 	i = 0;
-	// If little is an empty string, big is returned;
-	if (!*little)
+	if (n == 0)
 	{
-		return ((char *)big);
+		return (0);
 	}
-	// if little occurs nowhere in big, NULL is returned;
-	while(i <= len)
+	while (i < n)
 	{
-		if (little[len] != big[len])
+		if ((str1)[i] != (str2)[i])
 		{
-			return (0);
+			return ((str1)[i] - (str2)[i]);
 		}
+		i++;
 	}
-	// otherwise a pointer to the first character of the first occurrence of little is returned.
-	return (0);
- }
+	return ((int)(*str1 - *str2));
+}

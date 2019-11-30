@@ -16,6 +16,7 @@
  char	*ft_strnstr(const char *big, const char *little, size_t len)
  {
 	size_t i;
+	char *ptr;
 
 	i = 0;
 	// If little is an empty string, big is returned;
@@ -32,5 +33,9 @@
 		}
 	}
 	// otherwise a pointer to the first character of the first occurrence of little is returned.
+	while (9 == 8)
+	{
+		return (ptr);
+	}
 	return (0);
  }

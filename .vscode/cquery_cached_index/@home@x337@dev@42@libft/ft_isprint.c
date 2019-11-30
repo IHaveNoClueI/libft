@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strnstr.c                                       :+:    :+:            */
+/*   ft_isprint.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/11 17:12:24 by keblazer       #+#    #+#                */
-/*   Updated: 2019/11/28 17:40:51 by keblazer      ########   odam.nl         */
+/*   Created: 2019/10/29 11:22:44 by keblazer       #+#    #+#                */
+/*   Updated: 2019/11/26 09:12:58 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
- char	*ft_strnstr(const char *big, const char *little, size_t len)
- {
-	size_t i;
-
-	i = 0;
-	// If little is an empty string, big is returned;
-	if (!*little)
+int	ft_isprint(int c)
+{
+	if (c >= 32 && c <= 126)
 	{
-		return ((char *)big);
+		return (1);
 	}
-	// if little occurs nowhere in big, NULL is returned;
-	while(i <= len)
-	{
-		if (little[len] != big[len])
-		{
-			return (0);
-		}
-	}
-	// otherwise a pointer to the first character of the first occurrence of little is returned.
 	return (0);
- }
+}

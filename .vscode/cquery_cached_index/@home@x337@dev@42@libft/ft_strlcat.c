@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strnstr.c                                       :+:    :+:            */
+/*   ft_strlcat.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/11 17:12:24 by keblazer       #+#    #+#                */
-/*   Updated: 2019/11/28 17:40:51 by keblazer      ########   odam.nl         */
+/*   Created: 2019/11/11 17:12:33 by keblazer       #+#    #+#                */
+/*   Updated: 2019/11/26 12:14:51 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
- char	*ft_strnstr(const char *big, const char *little, size_t len)
- {
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
 	size_t i;
+	size_t k;
 
 	i = 0;
-	// If little is an empty string, big is returned;
-	if (!*little)
+	k = 0;
+	if (dstsize == 0)
 	{
-		return ((char *)big);
+		return (0);
 	}
-	// if little occurs nowhere in big, NULL is returned;
-	while(i <= len)
+	while (src[k] != '\0')
 	{
-		if (little[len] != big[len])
-		{
-			return (0);
-		}
+		k++;
 	}
-	// otherwise a pointer to the first character of the first occurrence of little is returned.
-	return (0);
- }
+	while (i < k && i < (dstsize - 1))
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (i);
+}
