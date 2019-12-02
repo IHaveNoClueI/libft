@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strjoin.c                                       :+:    :+:            */
+/*   ft_putstr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/11 17:12:35 by keblazer       #+#    #+#                */
-/*   Updated: 2019/12/02 14:54:43 by keblazer      ########   odam.nl         */
+/*   Created: 2019/11/11 17:12:43 by keblazer       #+#    #+#                */
+/*   Updated: 2019/12/02 14:18:22 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_putstr(char const *s)
 {
-	size_t	len1;
-	size_t	len2;
-	char	*result;
+	int		i;
 
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	result = malloc(len1 + len2 + 1);
-	if (result)
+	i = 0;
+	while (s[i] != 0)
 	{
-		ft_memcpy(result, s1, len1);
-		ft_memcpy(result + len1, s2, len2 + 1);
+		ft_putchar(s[i]);
+		i++;
 	}
-	return (result);
 }

@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strjoin.c                                       :+:    :+:            */
+/*   ft_putnbr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/11 17:12:35 by keblazer       #+#    #+#                */
-/*   Updated: 2019/12/02 14:54:43 by keblazer      ########   odam.nl         */
+/*   Created: 2019/11/11 17:12:45 by keblazer       #+#    #+#                */
+/*   Updated: 2019/12/02 14:17:31 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_putnbr(int nb)
 {
-	size_t	len1;
-	size_t	len2;
-	char	*result;
-
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	result = malloc(len1 + len2 + 1);
-	if (result)
+	if (nb == -2147483648)
+		ft_putstr("-2147483648");
+	else
 	{
-		ft_memcpy(result, s1, len1);
-		ft_memcpy(result + len1, s2, len2 + 1);
+		if (nb < 0)
+		{
+			ft_putchar('-');
+			nb = nb * -1;
+		}
+		if (nb >= 9)
+		{
+			ft_putnbr(nb / 10);
+		}
+		ft_putchar((nb % 10) + '0');
 	}
-	return (result);
 }
