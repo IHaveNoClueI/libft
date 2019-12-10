@@ -1,15 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_split.c                                         :+:    :+:            */
+/*   ft_isupper.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/11 17:12:41 by keblazer       #+#    #+#                */
-/*   Updated: 2019/12/10 15:47:57 by keblazer      ########   odam.nl         */
+/*   Created: 2019/12/10 15:02:36 by keblazer       #+#    #+#                */
+/*   Updated: 2019/12/10 15:03:00 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	**ft_split(char const *s, char c);
+int		ft_isupper(int c)
+{
+	return (c >= 65 && c <= 90);
+}

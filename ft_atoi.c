@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 11:22:33 by keblazer       #+#    #+#                */
-/*   Updated: 2019/11/30 15:30:48 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/12/10 14:49:54 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ int	ft_atoi(const char *str)
 	result = 0;
 	negative = 1;
 	i = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\r' || str[i] == '\f')
+	while (ft_isspace(str[i]))
 	{
 		i++;
 	}

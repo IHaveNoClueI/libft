@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 16:01:20 by keblazer       #+#    #+#                */
-/*   Updated: 2019/12/02 14:26:02 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/12/10 15:03:14 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int		ft_min(int num1, int num2);
 int		ft_max(int num1, int num2);
 int		ft_isspace(char c);
 void	ft_memdel(void *p);
+int		ft_islower(int c);
+int		ft_isupper(int c);
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);

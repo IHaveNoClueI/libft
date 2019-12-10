@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/04 13:14:51 by keblazer       #+#    #+#                */
-/*   Updated: 2019/11/15 02:55:58 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/12/10 15:09:03 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') ||
-	(c >= '0' && c <= '9'))
+	if (ft_isalpha(c) || ft_isdigit(c))
 	{
 		return (1);
 	}
