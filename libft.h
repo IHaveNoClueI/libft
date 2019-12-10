@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 16:01:20 by keblazer       #+#    #+#                */
-/*   Updated: 2019/12/10 15:03:14 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/12/10 16:48:18 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int		ft_isspace(char c);
 void	ft_memdel(void *p);
 int		ft_islower(int c);
 int		ft_isupper(int c);
+char	*ft_strrev(char *s);
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -62,5 +63,8 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
+
+# define FT_INT_MIN -2147483648
+# define FT_INT_MAX 2147483647
 
 #endif

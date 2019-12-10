@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/11 17:12:45 by keblazer       #+#    #+#                */
-/*   Updated: 2019/12/02 14:17:31 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/12/10 16:55:00 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr(int nb)
 {
-	if (nb == -2147483648)
+	if (nb == FT_INT_MIN)
 		ft_putstr("-2147483648");
 	else
 	{
