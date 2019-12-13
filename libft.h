@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 16:01:20 by keblazer       #+#    #+#                */
-/*   Updated: 2019/12/13 11:49:55 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/12/13 12:49:59 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
-char	*ft_itoa(int value, char *str, int base);
+char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
 
 # define FT_INT_MIN -2147483648
