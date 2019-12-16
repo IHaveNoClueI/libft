@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/11 17:12:35 by keblazer       #+#    #+#                */
-/*   Updated: 2019/12/02 14:54:43 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/12/16 12:14:03 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	len1;
-	size_t	len2;
+	int		len1;
+	int		len2;
 	char	*result;
 
 	len1 = ft_strlen(s1);
