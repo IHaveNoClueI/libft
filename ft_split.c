@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/11 17:12:41 by keblazer       #+#    #+#                */
-/*   Updated: 2019/12/16 13:50:31 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/12/17 12:44:56 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		ft_splitpos(char const *s, char c)
 	int pos;
 
 	pos = 0;
-	while (s[pos] != '\0' && s[pos] != c)
+	while (s[pos] != c)
 	{
 		pos++;
 	}
@@ -29,7 +29,7 @@ int		ft_splitlen(char const *s)
 	int len;
 
 	len = 0;
-	if (s[len] != '\0' && s[len] == ft_isalnum(s[len]))
+	if (s[len] != '\0')
 	{
 		len++;
 	}
@@ -45,8 +45,12 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	pos = ft_splitpos(s, c);
 	len = ft_splitlen(s);
-	while (s[pos] != c)
+	while (s[pos] != c && s[pos] != s[len] && s[len] != '\0')
 	{
+		if (s[pos] == c)
+		{
+			pos++;
+		}
 		ft_putchar(s[pos]);
 	}
 	return (0);

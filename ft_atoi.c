@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 11:22:33 by keblazer       #+#    #+#                */
-/*   Updated: 2019/12/10 14:49:54 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/12/17 13:01:38 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	long				i;
-	unsigned long int	result;
-	int					negative;
+	long long int	i;
+	long long int	result;
+	int				negative;
 
 	result = 0;
 	negative = 1;
