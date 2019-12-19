@@ -6,52 +6,80 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/11 17:12:41 by keblazer       #+#    #+#                */
-/*   Updated: 2019/12/17 12:44:56 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/12/19 17:10:22 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_splitpos(char const *s, char c)
+int		ft_count_words(char const *s, char c)
 {
-	int pos;
+	int i;
+	int words;
+	int isword;
 
-	pos = 0;
-	while (s[pos] != c)
+	i = 0;
+	words = 0;
+	isword = 0;
+	while (s[i] == c && s[i])
+		i++;
+	while (s[i])
 	{
-		pos++;
+		if (s[i] != c && s[i])
+			isword = 1;
+		if (s[i] == c)
+		{
+			while (s[i] == c && s[i])
+				i++;
+			if (s[i])
+				words++;
+		}
+		else
+			i++;
 	}
-	return (pos);
+	return (words + isword);
 }
 
-int		ft_splitlen(char const *s)
+char	*ft_mem_word(char const *s, char c)
 {
-	int len;
+	int		i;
+	char	*tab;
 
-	len = 0;
-	if (s[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
+	i = 0;
+	tab = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	if (!(tab = (char *)malloc(sizeof(char) * (i + 1))))
+		return (NULL);
+	ft_strlcpy(tab, s, i + 1);
+	return (tab);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		i;
-	int		pos;
-	int		len;
+	int		words;
+	char	**tab;
 
-	i = 0;
-	pos = ft_splitpos(s, c);
-	len = ft_splitlen(s);
-	while (s[pos] != c && s[pos] != s[len] && s[len] != '\0')
+	i = -1;
+	if (!s)
+		return (NULL);
+	words = ft_count_words(s, c);
+	if (!(tab = malloc(sizeof(char *) * (words + 1))))
+		return (NULL);
+	while (++i < words)
 	{
-		if (s[pos] == c)
+		while (s[0] == c)
+			s++;
+		if (!(tab[i] = ft_mem_word(s, c)))
 		{
-			pos++;
+			while (i > 0)
+				free(tab[i--]);
+			free(tab);
+			return (NULL);
 		}
-		ft_putchar(s[pos]);
+		s += ft_strlen(tab[i]);
 	}
-	return (0);
+	tab[i] = 0;
+	return (tab);
 }

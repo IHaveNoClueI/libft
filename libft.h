@@ -6,7 +6,7 @@
 /*   By: keblazer <keblazer@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/01 16:01:20 by keblazer       #+#    #+#                */
-/*   Updated: 2019/12/13 12:49:59 by keblazer      ########   odam.nl         */
+/*   Updated: 2019/12/19 16:42:18 by keblazer      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+
+# define FT_INT_MIN -2147483648
+# define FT_INT_MAX 2147483647
 
 int		ft_min(int num1, int num2);
 int		ft_max(int num1, int num2);
@@ -64,7 +67,20 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
 
-# define FT_INT_MIN -2147483648
-# define FT_INT_MAX 2147483647
+typedef struct		s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
